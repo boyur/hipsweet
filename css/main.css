@@ -794,8 +794,7 @@ ul {
   margin: auto;
   background: url("../img/team/Chocolate.png");
   font-size: 0;
-  border-radius: 20px;
-  overflow: auto; }
+  border-radius: 20px; }
 
 .team__order-left, .team__order-right {
   display: inline-block;
@@ -810,22 +809,54 @@ ul {
   font-weight: 400; }
 
 .team__order-right {
+  position: relative;
   width: 50%;
   height: 100%;
   background: rgba(0, 0, 0, 0.84);
-  font-size: 16px; }
+  font-size: 16px;
+  border-radius: 0 20px 20px 0; }
 
 .team__form {
-  padding: 20px; }
+  font-family: Arial, serif;
+  font-size: 16px;
+  color: white;
+  padding: 69px 50px;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  .team__form ::-webkit-input-placeholder {
+    color: white; }
+  .team__form ::-moz-placeholder {
+    color: white; }
+  .team__form :-moz-placeholder {
+    color: white; }
+  .team__form :-ms-input-placeholder {
+    color: white; }
 
 .team__form-input {
   display: block;
   background: transparent;
   width: 70%;
   height: 50px;
-  margin: 20px 0;
+  margin: 0 0 30px 0;
   border: none;
-  border-bottom: 1px solid white; }
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none; }
+
+.team__form-check {
+  margin-right: 10px; }
+
+.team__form-submit {
+  display: inline-block;
+  position: absolute;
+  background: #ffb100 url("../img/team/arrow.svg") 2px 2px no-repeat;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: none;
+  right: -50px;
+  bottom: -50px;
+  cursor: pointer; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
