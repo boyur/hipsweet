@@ -1,0 +1,166 @@
+.header {
+  @extend %clearfix;
+  height: 66px;
+  padding: 25px 0;
+  margin-bottom: 47px;
+}
+
+.logo {
+  float: left;
+  width: 27%;
+  padding-right: 8%;
+  margin-left: 20px;
+}
+
+.menu {
+  @extend %clearfix;
+  float: left;
+  width: 48%;
+  height: 66px;
+}
+
+.menu__main {
+  font-family: Arial, serif;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-align: justify;
+
+  padding-top: 25px;
+
+  &:after {
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.header__buttons {
+  display: inline;
+  float: right;
+  text-align: center;
+  color: white;
+  width: 13%;
+  padding-top: 15px;
+}
+
+.round_btn {
+  display: inline-block;
+  background-color: rgba(#fff, 0.1);
+  width: 42px;
+  height: 42px;
+  margin: 0 10px;
+  border-radius: 50%;
+}
+
+.menu__item {
+  display: inline;
+  position: relative;
+  color: white;
+
+  &:hover {
+    color: #fca211;
+
+    .contacts__dropdown {
+      //display: inline-block;
+      opacity: 1;
+      left: 50%;
+    }
+  }
+
+}
+
+.menu__item_link {
+
+  text-decoration: none;
+  color: white;
+  padding-bottom: 20px;
+
+  &:hover {
+    color: #fca211;
+  }
+}
+
+
+//Всплывашка
+
+.contacts__dropdown {
+  //display: none;
+  position: absolute;
+  //float: right;
+  //text-align: center;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  z-index: 1000;
+  left: -9999px;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  opacity: 0;
+  //transition: opacity .5s;
+  cursor: pointer;
+  padding: 25px;
+
+  // Треугольник
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    margin-left: -20px;
+    top: -20px;
+    border: 10px solid;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-color: transparent transparent white transparent;
+
+  }
+
+  &:hover {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+.contacts__dropdown-item {
+  display: block;
+  position: relative;
+  text-align: left;
+  padding: 10px;
+
+  &:hover {
+    .contacts__dropdown-text {
+      color: #0483d9;
+      font-weight: bold;
+      padding-right: 0;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: -26px;
+      top: 33%;
+      border: 10px solid;
+      border-color: transparent transparent transparent #fca211;
+    }
+  }
+
+
+}
+
+
+.contacts__dropdown-text {
+  display: inline-block;
+  text-decoration: none;
+  word-wrap: normal;
+  padding-left: 5px;
+  font-family: Arial, serif;
+  font-size: 18px;
+  color: #000;
+  padding-right: 15px;
+  //@include transition(1s);
+}

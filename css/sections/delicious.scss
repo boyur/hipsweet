@@ -1,0 +1,57 @@
+.delicious {
+  background: radial-gradient(circle at 70% 75%, #fffffe, #c8c7c8, #c8c7c8 200% );
+}
+
+.delicious__left {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 100px;
+  margin-left: 50px;
+  width: 55%;
+}
+
+.delicious__title {
+  font-family: ALSMalina, serif;
+  color: #2b2f5f;
+  width: 410px;
+  font-size: 62px;
+  line-height: 74px;
+  margin-bottom: 35px;
+}
+
+.delicious__text {
+  color: #747474;
+  width: 410px;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.delicious__item {
+  display: inline-block;
+  width: 32%;
+}
+
+.delicious__item_img {
+  padding-bottom: 20px;
+}
+
+.delicious__item_title {
+  font-family: ALSMalina, serif;
+  color: #747474;
+  font-size: 16px;
+}
+
+.delicious__right {
+  display: inline-block;
+  width: 40%;
+  padding-top: 50px;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.delicious__man {
+  height: 708px;
+  width: 383px;
+  background: url("../img/delicious/man.png") no-repeat;
+  bottom: 0;
+}

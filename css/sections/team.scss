@@ -1,0 +1,156 @@
+.team {
+  background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%);
+}
+
+.team__header {
+  @extend %clearfix;
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.team__title {
+  width: 30%;
+  float: left;
+
+  font-family: ALSMalina, serif;
+  color: #2b2f60;
+  font-size: 62px;
+  line-height: 76px;
+}
+
+.team__nav {
+  width: 65%;
+  float: right;
+}
+
+.team__mav-item {
+  display: inline-block;
+  width: 25%;
+  padding: 20px;
+  margin: 1%;
+  border-radius: 20px;
+}
+
+.team__item-title {
+  font-family: ALSMalina, serif;
+  color: #2b2f60;
+  font-size: 30px;
+}
+
+.team__item-text {
+  font-family: Arial, serif;
+  color: #8d8d8d;
+  font-size: 16px;
+}
+
+.team__mav-item--active,
+.team__mav-item:hover {
+  position: relative;
+  background: #893213;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 13px solid transparent;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-top-color: #893213;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .team__item-title {
+    color: #ffa92b;
+  }
+
+  .team__item-text {
+    color: white;
+  }
+}
+
+.team__content {
+  @extend %clearfix;
+  padding-top: 30px;
+
+  font-family: Arial, serif;
+  font-size: 14px;
+  color: #747474;
+  font-style: italic;
+}
+
+.team__content-right {
+  width: 33%;
+  float: right;
+}
+
+.team__content-left {
+  width: 25%;
+  float: left;
+}
+
+.team__content-center {
+  width: 33%;
+  float: left;
+}
+
+.team__img {
+  height: 613px;
+  width: 527px;
+  background: url("../img/team/Roister.png") no-repeat;
+  bottom: 0;
+}
+
+.team__order {
+  padding-bottom: 30px;
+}
+
+.team__order-main {
+  position: relative;
+  width: 843px;
+  height: 408px;
+  margin: auto;
+  background: url("../img/team/Chocolate.png");
+  font-size: 0;
+  border-radius: 20px;
+  overflow: auto;
+}
+
+.team__order-left, .team__order-right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.team__order-left {
+  width: 50%;
+  text-align: center;
+
+  font-family: ALSMalina, serif;
+  color: white;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.team__order-right {
+  width: 50%;
+  height: 100%;
+  background: rgba(#000, 0.84);
+  font-size: 16px;
+}
+
+.team__form {
+  padding: 20px;
+}
+
+.team__form-input {
+  display: block;
+  background: transparent;
+  width: 70%;
+  height: 50px;
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid white;
+}

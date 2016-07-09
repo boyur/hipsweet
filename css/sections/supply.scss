@@ -1,0 +1,45 @@
+.supply {
+  background: linear-gradient(90deg, rgba(255, 170, 37, 0.9), rgba(253, 182, 7, 0.9)), url("../img/pattern.png");
+}
+
+.supply__title {
+  font-family: ALSMalina, serif;
+  color: #393939;
+  font-size: 62px;
+  line-height: 74px;
+  padding: 100px 150px 15px 150px;
+  text-align: center;
+}
+
+.supply__text {
+  font-family: Myriad Pro, serif;
+  color: #883213;
+  width: 800px;
+  font-size: 16px;
+  padding: 0 150px 30px 150px;
+  text-align: center;
+}
+
+.supply__content {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.supply__item {
+  display: inline-block;
+  width: 22%;
+  margin: 1%;
+  text-align: center;
+}
+
+.supply__item-title {
+  font-family: ALSMalina, serif;
+  font-size: 32px;
+  color: #393939;
+}
+
+.supply__item-text {
+  font-family: Myriad Pro, serif;
+  color: #ab594a;
+  font-size: 14px;
+}
