@@ -1,0 +1,20 @@
+{
+  "name": "Hipsweet",
+  "authors": [
+    "Boyur <gboyur@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.12.3"
+  }
+}
