@@ -24,4 +24,35 @@ $(document).ready(function() {
 
 	});
 
+    //Акардион
+
+    var flag = true;
+    $('.acco__item').on('click', function(e){
+        e.preventDefault();
+        var
+            $this = $(this),
+            item = $this.closest('.acco__item'),
+            currentContent = item.find('.acco__content'),
+            duration = 500;
+
+        if (flag) {
+            flag = false;
+            if (!item.hasClass('acco__item--active')) {
+                item
+                    .addClass('acco__item--active')
+                    .siblings()
+                    .removeClass('acco__item--active')
+                    .find('.acco__content')
+                    .slideUp(duration);
+                currentContent.slideDown(duration, function () {
+                    flag = true
+                });
+            } else {
+                item.removeClass('acco__item--active');
+                currentContent.slideUp(function() {
+                    flag = true
+                });
+            }
+        }
+    });
 });

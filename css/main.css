@@ -824,7 +824,7 @@ ul {
   bottom: 0; }
 
 .team__order {
-  padding-bottom: 30px; }
+  padding-bottom: 100px; }
 
 .team__order-main {
   position: relative;
@@ -896,6 +896,62 @@ ul {
   right: -50px;
   bottom: -50px;
   cursor: pointer; }
+
+.questions {
+  background: url("../img/questions/back_questions.jpg") no-repeat;
+  background-size: cover; }
+
+.questions_title {
+  font-family: ALSMalina, serif;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 50px; }
+
+.acco {
+  width: 960px;
+  min-height: 450px;
+  margin: auto;
+  padding-bottom: 50px; }
+
+.acco__item {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+  list-style: inherit; }
+  .acco__item:last-child {
+    border-bottom: none; }
+
+.acco__trigger {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #fff; }
+
+.acco__content {
+  display: none;
+  font-family: Arial, serif;
+  font-size: 15px;
+  color: white;
+  list-style: disc inside;
+  padding: 10px 10px 10px 30px; }
+
+.acco__content-item {
+  margin-bottom: 5px; }
+
+.active {
+  display: block; }
+
+.acco__item--active {
+  color: #ffb100; }
+  .acco__item--active .acco__trigger {
+    color: #ffb100;
+    border-bottom: 2px dashed #ffb100; }
+  .acco__item--active .acco__content {
+    display: block; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
