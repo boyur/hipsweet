@@ -35,6 +35,8 @@ $(document).ready(function() {
             currentContent = item.find('.acco__content'),
             duration = 500;
 
+            console.log(currentContent);
+
         if (flag) {
             flag = false;
             if (!item.hasClass('acco__item--active')) {
