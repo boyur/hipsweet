@@ -54,10 +54,6 @@
   margin-bottom: 5px;
 }
 
-.active {
-  display: block;
-}
-
 .acco__item--active {
   color: #ffb100;
 
@@ -65,8 +61,4 @@
     color: #ffb100;
     border-bottom: 2px dashed #ffb100;
   }
-
-  .acco__content {
-    display: block;
-  };
 }

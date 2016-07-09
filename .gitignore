@@ -2,4 +2,4 @@
 prepros.cfg
 bower.json
 bower_components/
-img/team/arrow.svg
+node_modules/

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     // Слайдер
     var btn = 1;
 	$('.slider__dot').on('click', function(e){
@@ -24,8 +24,7 @@ $(document).ready(function() {
 
 	});
 
-    //Акардион
-
+    //Аккордеон
     var flag = true;
     $('.acco__item').on('click', function(e){
         e.preventDefault();
@@ -34,8 +33,6 @@ $(document).ready(function() {
             item = $this.closest('.acco__item'),
             currentContent = item.find('.acco__content'),
             duration = 500;
-
-            console.log(currentContent);
 
         if (flag) {
             flag = false;

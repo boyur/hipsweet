@@ -386,10 +386,10 @@ ul {
   src: url("../fonts/malina-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/malina-webfont.woff2") format("woff2"), url("../fonts/malina-webfont.woff") format("woff"), url("../fonts/malina-webfont.ttf") format("truetype"), url("../fonts/malina-webfont.svg#als_malinaregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.header:after, .menu:after, .team__header:after, .team__content:after, .header:before, .menu:before, .team__header:before, .team__content:before {
+.container:after, .header:after, .menu:after, .team__header:after, .team__content:after, .container:before, .header:before, .menu:before, .team__header:before, .team__content:before {
   content: "";
   display: table; }
-.header:after, .menu:after, .team__header:after, .team__content:after {
+.container:after, .header:after, .menu:after, .team__header:after, .team__content:after {
   clear: both; }
 
 .header {
@@ -942,16 +942,36 @@ ul {
 .acco__content-item {
   margin-bottom: 5px; }
 
-.active {
-  display: block; }
-
 .acco__item--active {
   color: #ffb100; }
   .acco__item--active .acco__trigger {
     color: #ffb100;
     border-bottom: 2px dashed #ffb100; }
-  .acco__item--active .acco__content {
-    display: block; }
+
+.map {
+  height: 500px; }
+
+.footer {
+  height: 70px;
+  margin-top: 30px; }
+
+.footer__logo {
+  float: left;
+  width: 25%; }
+
+.footer__logo-img {
+  height: 50px; }
+
+.footer__text {
+  float: left;
+  width: 25%;
+  line-height: 56px; }
+
+.footer__social {
+  float: right;
+  width: 25%;
+  line-height: 56px;
+  text-align: right; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
