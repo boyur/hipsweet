@@ -6,6 +6,7 @@
   position: relative;
   height: 500px;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .slider__dots {
@@ -35,6 +36,26 @@
    line-height: 14px;
    font-size: 50px;
  }
+
+  &:hover {
+    &:before {
+      color: rgba(252, 162, 17, 0.6);
+    }
+  }
+}
+
+
+.slider__dot--active {
+
+  &:before {
+    color: #fca211;
+  }
+
+  &:hover {
+    &:before {
+      color: #fca211;
+    }
+  }
 }
 
 .bestseller__slider-main {
@@ -47,6 +68,7 @@
   position: absolute;
   left: 16%;
   z-index: 2;
+  height: 475px;
 }
 
 .bestseller__big_text {
