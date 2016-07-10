@@ -1,5 +1,2 @@
 .idea/
 prepros.cfg
-node_modules/
-.idea/workspace.xml
-bower_components/jquery-mask-plugin/test/
