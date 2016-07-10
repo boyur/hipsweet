@@ -88,7 +88,8 @@
 
   .team-tabs__content-item {
     display: none;
-    min-height: 500px;
+    position: relative;
+    min-height: 600px;
 
     columns: 2;
     column-gap: 450px;
@@ -131,7 +132,7 @@
 .team__order-man{
   width: 100%;
   position: absolute;
-  top: -100%;
+  bottom: 0
 }
 
 .team__order-man-img{
