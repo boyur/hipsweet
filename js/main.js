@@ -62,13 +62,39 @@ $(document).ready(function() {
 
     // columns
     (function () {
-    $('#mydiv').columnize({ columns: 2 });
+    $('#tab1').columnize({ columns: 2 });
     $('.first').attr('style', 'width:25%; float:left;')
     $('.last').attr('style', 'width:33%; float:right;')
     })();
 
 
+    // tabs
+    (function(){
+        $('.team-tabs__item').on('click', function(e){
+            e.preventDefault();
 
+            var
+                $this = $(this),
+                item = $this.closest('.team-tabs__item'),
+                container = $this.closest('.team-tabs'),
+                content = container.find('.team-tabs__content-item'),
+                ndx = item.index(),
+                reqItem = content.eq(ndx),
+                activeItem = content.filter('.active');
+
+            item.addClass('active')
+                .siblings()
+                .removeClass('active');
+
+            activeItem.fadeOut(500, function () {
+                reqItem.fadeIn(500, function () {
+                    $(this).addClass('active')
+                        .siblings()
+                        .removeClass('active');
+                });
+            });
+        });
+    }());
 
 });
 

@@ -389,10 +389,10 @@ ul {
   src: url("../fonts/malina-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/malina-webfont.woff2") format("woff2"), url("../fonts/malina-webfont.woff") format("woff"), url("../fonts/malina-webfont.ttf") format("truetype"), url("../fonts/malina-webfont.svg#als_malinaregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.container:after, .header:after, .menu:after, .team__header:after, .team__content:after, .container:before, .header:before, .menu:before, .team__header:before, .team__content:before {
+.container:after, .header:after, .menu:after, .team-tabs__head:after, .container:before, .header:before, .menu:before, .team-tabs__head:before {
   content: "";
   display: table; }
-.container:after, .header:after, .menu:after, .team__header:after, .team__content:after {
+.container:after, .header:after, .menu:after, .team-tabs__head:after {
   clear: both; }
 
 .header {
@@ -740,12 +740,75 @@ ul {
   color: #ab594a;
   font-size: 14px; }
 
-.team {
-  background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%); }
+.team-tabs {
+  width: 100%;
+  margin-top: 100px;
+  min-height: 300px; }
 
-.team__header {
+.team-tabs__head {
   padding-top: 90px;
   padding-bottom: 30px; }
+
+.team-tabs__num {
+  font-size: 30px;
+  color: green; }
+
+.team-tabs__list {
+  width: 65%;
+  float: right;
+  padding-bottom: 10px;
+  margin-bottom: 10px; }
+
+.team-tabs__item {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 31%;
+  margin: 1%; }
+  .team-tabs__item .team-tabs__item-main {
+    padding: 20px;
+    border-radius: 20px; }
+  .team-tabs__item.active .team-tabs__item-main {
+    background: #893213;
+    cursor: pointer; }
+    .team-tabs__item.active .team-tabs__item-main:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 13px solid transparent;
+      border-left-width: 20px;
+      border-right-width: 20px;
+      border-top-color: #893213;
+      top: 99%;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%); }
+    .team-tabs__item.active .team-tabs__item-main .team__item-title {
+      color: #ffa92b; }
+    .team-tabs__item.active .team-tabs__item-main .team__item-text {
+      color: white; }
+  .team-tabs__item:hover {
+    cursor: pointer; }
+  .team-tabs__item:first-child {
+    margin-left: 0; }
+
+.team-tabs__link {
+  display: block;
+  padding: 5px 10px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Courier New", serif; }
+
+.team-tabs__content-item .team-tabs__content-text {
+  display: none;
+  min-height: 500px; }
+.team-tabs__content-item.active .team-tabs__content-text {
+  display: block; }
+
+.team {
+  background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%); }
 
 .team__title {
   width: 30%;
@@ -754,17 +817,6 @@ ul {
   color: #2b2f60;
   font-size: 62px;
   line-height: 76px; }
-
-.team__nav {
-  width: 65%;
-  float: right; }
-
-.team__mav-item {
-  display: inline-block;
-  width: 25%;
-  padding: 20px;
-  margin: 1%;
-  border-radius: 20px; }
 
 .team__item-title {
   font-family: ALSMalina, serif;
@@ -775,41 +827,6 @@ ul {
   font-family: Arial, serif;
   color: #8d8d8d;
   font-size: 16px; }
-
-.team__mav-item--active,
-.team__mav-item:hover {
-  position: relative;
-  background: #893213;
-  cursor: pointer; }
-  .team__mav-item--active:after,
-  .team__mav-item:hover:after {
-    content: "";
-    display: block;
-    position: absolute;
-    border: 13px solid transparent;
-    border-left-width: 20px;
-    border-right-width: 20px;
-    border-top-color: #893213;
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
-  .team__mav-item--active .team__item-title,
-  .team__mav-item:hover .team__item-title {
-    color: #ffa92b; }
-  .team__mav-item--active .team__item-text,
-  .team__mav-item:hover .team__item-text {
-    color: white; }
-
-.team__content {
-  padding-top: 30px;
-  margin-bottom: 100px; }
-
-.team__content-text {
-  font-family: Arial, serif;
-  font-size: 14px;
-  color: #747474;
-  font-style: italic; }
 
 .team__order-man {
   width: 100%;
