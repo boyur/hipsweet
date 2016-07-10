@@ -25,17 +25,17 @@
   margin: 5px;
 
   &:before {
-   top: 0;
-   left: 0;
-   content: '\2022';
-   width: 20px;
-   height: 20px;
-   text-align: center;
-   color: #fff;
-   opacity: 1;
-   line-height: 14px;
-   font-size: 50px;
- }
+    top: 0;
+    left: 0;
+    content: '\2022';
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+    line-height: 14px;
+    font-size: 32px;
+  }
 
   &:hover {
     &:before {
