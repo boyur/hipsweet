@@ -75,36 +75,32 @@
 .team__content {
   @extend %clearfix;
   padding-top: 30px;
+  margin-bottom: 100px;
+}
 
+.team__content-text {
   font-family: Arial, serif;
   font-size: 14px;
   color: #747474;
   font-style: italic;
 }
 
-.team__content-right {
-  width: 33%;
-  float: right;
+.team__order-man{
+  width: 100%;
+  position: absolute;
+  top: -100%;
 }
 
-.team__content-left {
-  width: 25%;
-  float: left;
-}
-
-.team__content-center {
-  width: 33%;
-  float: left;
-}
-
-.team__img {
+.team__order-man-img{
   height: 613px;
   width: 527px;
   background: url("../img/team/Roister.png") no-repeat;
   bottom: 0;
+  margin: auto;
 }
 
 .team__order {
+  position: relative;
   padding-bottom: 100px;
 }
 

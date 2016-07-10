@@ -59,4 +59,17 @@ $(document).ready(function() {
     (function () {
         $('#phone').mask('+7 (000) 000 - 00 - 00');
     })();
+
+    // columns
+    (function () {
+    $('#mydiv').columnize({ columns: 2 });
+    $('.first').attr('style', 'width:25%; float:left;')
+    $('.last').attr('style', 'width:33%; float:right;')
+    })();
+
+
+
+
 });
+
+
