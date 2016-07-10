@@ -6,7 +6,8 @@
   display: inline-block;
   vertical-align: top;
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: 65px;
+  margin-right: 10px;
   width: 55%;
 }
 
@@ -16,14 +17,14 @@
   width: 410px;
   font-size: 62px;
   line-height: 74px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .delicious__text {
   color: #747474;
   width: 410px;
   font-size: 15px;
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .delicious__item {
@@ -32,7 +33,7 @@
 }
 
 .delicious__item_img {
-  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .delicious__item_title {
@@ -43,7 +44,7 @@
 
 .delicious__right {
   display: inline-block;
-  width: 40%;
+  width: 35%;
   padding-top: 50px;
   position: relative;
   vertical-align: bottom;

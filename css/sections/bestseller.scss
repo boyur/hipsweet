@@ -58,6 +58,8 @@
   }
 }
 
+
+
 .bestseller__slider-main {
   position: absolute;
   height: 500px;
@@ -66,7 +68,7 @@
 
 .bestseller__slider_img {
   position: absolute;
-  left: 16%;
+  left: 17%;
   z-index: 2;
   height: 475px;
 }
@@ -95,15 +97,109 @@
 
 .bestseller__ingredients {
   display: inline-block;
-  margin-top: 80px;
+  margin-top: 85px;
   margin-left: 20px;
   text-align: center;
 }
 
+.ingredients__icon {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  position: relative;
+  background: rgba(255, 255, 255, .1) url("../img/slider/ingredients-sprite.png") -1px -159px;
+
+  &:hover {
+    background: rgb(255, 175, 40) url("../img/slider/ingredients-sprite.png") -1px -159px;
+
+    .ingredients__dropdoun-list {
+      display: block;
+    }
+  }
+}
+
+.ingredients__dropdoun-list {
+  display: none;
+  width: 380px;
+  background-color: rgba(255,255,255,.92);
+  position: absolute;
+  left: 92px;
+  -webkit-transform: translateY(-30%);
+  transform: translateY(-30%);
+  padding: 30px;
+  text-align: left;
+  color: #575757;
+  border-radius: 20px;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 55px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 13px solid transparent;
+    border-top-width: 20px;
+    border-bottom-width: 20px;
+    border-right-color: rgba(255,255,255,.92);
+    right: 100%;
+    top: 31%;
+  }
+
+}
+
+.ingredients__dropdoun-item {
+  padding: 5px 0;
+
+  .ingredient__icon {
+    background-image: url("../img/slider/ingredients-sprite.png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 28px;
+    color: #393939;
+  }
+
+  .ingredient__icon_flour {
+    background-position: -7px -80px;
+  }
+
+  .ingredient__icon_eggs {
+    background-position: -8px -40px;
+  }
+
+  .ingredient__icon_sugar {
+    background-position: -8px -241px;
+  }
+
+  .ingredient__icon_butter {
+    background-position: -9px -2px;
+  }
+
+  .ingredient__icon_susu {
+    background-position: -9px -121px;
+  }
+}
+
+.ingredient {
+  display: inline-block;
+  width: 63%;
+}
+
+
 .bestseller__ingredients_text {
   color: white;
   font-size: 15px;
-  margin-top: 10px;
+  margin-top: -5px;
 }
 
 .bestseller__time {

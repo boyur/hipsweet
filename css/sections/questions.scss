@@ -9,23 +9,22 @@
   font-size: 40px;
   color: white;
 
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 65px;
 }
 
 .acco {
   width: 960px;
   min-height: 450px;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .acco__item {
   font-size: 22px;
   color: white;
-  //border-bottom: 3px solid green;
-  margin-bottom: 10px;
   list-style: inherit;
+  margin-bottom: 25px;
 
   &:last-child {
     border-bottom: none;
@@ -37,7 +36,6 @@
   text-decoration: none;
   font-size: 22px;
   color: white;
-  margin-bottom: 10px;
   border-bottom: 2px dashed #fff;
 }
 
@@ -47,7 +45,7 @@
   font-size: 15px;
   color: white;
   list-style: disc inside;
-  padding: 10px 10px 10px 30px;
+  padding: 0px 10px 40px 45px;
 }
 
 .acco__content-item {
@@ -59,6 +57,6 @@
 
   .acco__trigger {
     color: #ffb100;
-    border-bottom: 2px dashed #ffb100;
+    border-bottom: 0;
   }
 }

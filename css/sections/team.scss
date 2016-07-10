@@ -1,15 +1,29 @@
+.team {
+  background: radial-gradient(circle at 50% 40%, #fafbfc, #cacbcc, #cacbcc 250%)
+}
+
+
+.team__title {
+  width: 30%;
+  float: left;
+
+  font-family: ALSMalina, serif;
+  color: #2b2f60;
+  font-size: 62px;
+  line-height: 76px;
+}
+
 // tabs
 
 .team-tabs {
   width: 100%;
-  margin-top: 100px;
   min-height: 300px;
 }
 
 .team-tabs__head {
   @extend %clearfix;
-  padding-top: 90px;
-  padding-bottom: 30px;
+  padding-top: 75px;
+  padding-bottom: 65px;
 }
 
 .team-tabs__num {
@@ -86,45 +100,36 @@
 }
 
 
-  .team-tabs__content-item {
-    display: none;
-    position: relative;
-    min-height: 600px;
+.team-tabs__content-item {
+  font-size: 14px;
+  font-style: italic;
+  color: #747474;
 
-    columns: 2;
-    column-gap: 450px;
+  display: none;
+  position: relative;
+  min-height: 580px;
 
-    &.active {
-      display: block;
-    }
+  columns: 2;
+  column-gap: 450px;
+
+  &.active {
+    display: block;
   }
-
-.team {
-  background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%);
 }
-
-
-.team__title {
-  width: 30%;
-  float: left;
-
-  font-family: ALSMalina, serif;
-  color: #2b2f60;
-  font-size: 62px;
-  line-height: 76px;
-}
-
 
 .team__item-title {
   font-family: ALSMalina, serif;
   color: #2b2f60;
   font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 5px;
 }
 
 .team__item-text {
   font-family: Arial, serif;
   color: #8d8d8d;
   font-size: 16px;
+  margin-bottom: 5px;
 }
 
 
@@ -137,7 +142,7 @@
 
 .team__order-man-img{
   height: 613px;
-  width: 527px;
+  width: 470px;
   background: url("../img/team/Roister.png") no-repeat;
   bottom: 0;
   margin: auto;
@@ -145,7 +150,7 @@
 
 .team__order {
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
 }
 
 .team__order-main {
@@ -171,6 +176,8 @@
   color: white;
   font-size: 64px;
   font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 5px;
 }
 
 .team__order-right {
@@ -222,4 +229,10 @@
   right: -50px;
   bottom: -50px;
   cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: rgb(255, 207, 0) url("../img/team/arrow.svg") 2px 2px no-repeat;
+  }
+
 }

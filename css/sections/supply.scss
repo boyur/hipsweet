@@ -6,7 +6,7 @@
   font-family: ALSMalina, serif;
   color: #393939;
   font-size: 62px;
-  line-height: 74px;
+  line-height: 65px;
   padding: 100px 150px 15px 150px;
   text-align: center;
 }
@@ -16,19 +16,19 @@
   color: #883213;
   width: 800px;
   font-size: 16px;
-  padding: 0 150px 30px 150px;
+  padding: 0 150px 10px 150px;
   text-align: center;
 }
 
 .supply__content {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 38px;
 }
 
 .supply__item {
   display: inline-block;
   width: 22%;
-  margin: 1%;
+  margin: 1% 1% 50px;
   text-align: center;
 }
 
@@ -36,6 +36,7 @@
   font-family: ALSMalina, serif;
   font-size: 32px;
   color: #393939;
+  margin-top: 8px;
 }
 
 .supply__item-text {

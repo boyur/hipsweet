@@ -7,7 +7,7 @@
 
 .logo {
   float: left;
-  width: 27%;
+  width: 25%;
   padding-right: 8%;
   margin-left: 20px;
 }
@@ -15,7 +15,7 @@
 .menu {
   @extend %clearfix;
   float: left;
-  width: 48%;
+  width: 50%;
   height: 66px;
 }
 
@@ -47,20 +47,51 @@
 
 .round_btn {
   display: inline-block;
-  background-color: rgba(#fff, 0.1);
-  width: 42px;
-  height: 42px;
   margin: 0 10px;
-  border-radius: 50%;
 }
+
+.icons__link {
+  display: block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: rgba(173, 46, 51, 1) url("../img/header/header-sprite.png") no-repeat;
+
+  &:hover {
+    background: rgb(255, 175, 40) url("../img/header/header-sprite.png") no-repeat;
+  }
+}
+
+.icons__link_person {
+  background-position: 0 0;
+
+  &:hover {
+    background-position: 0 0;
+  }
+}
+
+.icons__link_search {
+  background-position: 0 -40px;
+
+  &:hover {
+    background-position: 0 -40px;
+  }
+}
+
 
 .menu__item {
   display: inline;
   position: relative;
   color: white;
+  margin-left: 25px;
 
   &:hover {
     color: #fca211;
+    cursor: pointer;
+
+    .menu__item_link {
+      color: #fca211;
+    }
 
     .contacts__dropdown {
       //display: inline-block;
@@ -72,33 +103,44 @@
 }
 
 .menu__item_link {
-
   text-decoration: none;
   color: white;
-  padding-bottom: 20px;
-
-  &:hover {
-    color: #fca211;
-  }
+  padding-bottom: 23px;
 }
 
+.menu__item .menu__item_link:after {
+  display: inline-block;
+  content: "";
+  height: 4px;
+  width: 4px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-left: -20px;
+  margin-bottom: 3px;
+}
+
+.menu__item:hover .menu__item_link:after {
+  content: "";
+  border-left: 1px solid #ffaf28;
+  border-top: 1px solid #ffaf28;
+  border-right: none;
+  border-bottom: none;
+  margin-bottom: 0;
+}
 
 //Всплывашка
 
 .contacts__dropdown {
-  //display: none;
   position: absolute;
-  //float: right;
-  //text-align: center;
-  background: #fff;
-  border: 1px solid #dedede;
+  background: rgba(white, 0.9);
   border-radius: 10px;
   z-index: 1000;
   left: -9999px;
   transform: translateX(-50%);
-  margin-top: 10px;
+  margin-top: 20px;
   opacity: 0;
-  //transition: opacity .5s;
   cursor: pointer;
   padding: 25px;
 
@@ -114,8 +156,7 @@
     border: 10px solid;
     border-left-width: 20px;
     border-right-width: 20px;
-    border-color: transparent transparent white transparent;
-
+    border-color: transparent transparent rgba(white, 0.9) transparent;
   }
 
   &:hover {
@@ -129,6 +170,7 @@
   position: relative;
   text-align: left;
   padding: 10px;
+  white-space: nowrap;
 
   &:hover {
     .contacts__dropdown-text {
@@ -142,7 +184,7 @@
       position: absolute;
       width: 0;
       height: 0;
-      left: -26px;
+      left: -25px;
       top: 33%;
       border: 10px solid;
       border-color: transparent transparent transparent #fca211;
@@ -152,15 +194,13 @@
 
 }
 
-
 .contacts__dropdown-text {
   display: inline-block;
   text-decoration: none;
   word-wrap: normal;
   padding-left: 5px;
   font-family: Arial, serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
   padding-right: 15px;
-  //@include transition(1s);
 }
