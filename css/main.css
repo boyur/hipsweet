@@ -801,11 +801,13 @@ ul {
   font-size: 20px;
   font-family: "Courier New", serif; }
 
-.team-tabs__content-item .team-tabs__content-text {
+.team-tabs__content-item {
   display: none;
-  min-height: 500px; }
-.team-tabs__content-item.active .team-tabs__content-text {
-  display: block; }
+  min-height: 500px;
+  columns: 2;
+  column-gap: 450px; }
+  .team-tabs__content-item.active {
+    display: block; }
 
 .team {
   background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%); }

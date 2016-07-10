@@ -85,19 +85,18 @@
   font-family: "Courier New", serif;
 }
 
-.team-tabs__content-item {
-  .team-tabs__content-text {
+
+  .team-tabs__content-item {
     display: none;
     min-height: 500px;
-  }
 
-  &.active {
-    .team-tabs__content-text {
+    columns: 2;
+    column-gap: 450px;
+
+    &.active {
       display: block;
     }
   }
-}
-
 
 .team {
   background: radial-gradient(circle at 50% 50%, #fafbfc, #cacbcc, #cacbcc 200%);
