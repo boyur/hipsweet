@@ -180,4 +180,28 @@ $(document).ready(function () {
 
 });
 
+// Yandex map
+(function() {
+    ymaps.ready(init);
+    var
+        myMap,
+        myPlacemark;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [44.73498924390664,37.73530074198924],
+            zoom: 14,
+            controls: []
+        });
+        myPlacemark = new ymaps.Placemark([44.73498924390664,37.73530074198924], {},{
+            iconLayout: 'default#image',
+            iconImageHref: 'img/marker.png',
+            iconImageSize: [42, 59],
+            iconImageOffset: [-20, -55]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.behaviors.disable('scrollZoom');
+    }
+})();
+
 
