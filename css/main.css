@@ -557,7 +557,11 @@ ul {
 .bestseller__slider {
   position: relative;
   height: 500px;
-  padding-bottom: 100px;
+  padding-bottom: 100px; }
+
+.bestseller__slider-body {
+  position: relative;
+  height: 100%;
   overflow: hidden; }
 
 .slider__dots {
@@ -591,6 +595,28 @@ ul {
   color: #fca211; }
 .slider__dot--active:hover:before {
   color: #fca211; }
+
+.bestseller__slider-left, .bestseller__slider-right {
+  display: table;
+  text-align: center;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  font-size: 70px;
+  width: 100px;
+  height: 500px;
+  line-height: 500px;
+  cursor: pointer;
+  transition: 1s; }
+
+.bestseller__slider:hover .bestseller__slider-left,
+.bestseller__slider:hover .bestseller__slider-right {
+  color: rgba(255, 255, 255, 0.3); }
+
+.bestseller__slider-left {
+  left: -100px; }
+
+.bestseller__slider-right {
+  right: -100px; }
 
 .bestseller__slider-main {
   left: 100%;

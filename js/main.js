@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-        // Слайдер
+    // Слайдер
     (function () {
 
         var sliderArr = new Array();
@@ -23,11 +23,11 @@ $(document).ready(function () {
                 $(dotsArr[dotId]).removeClass("slider__dot--active");
 
                 if (dotId < newId) {
-                    $(sliderArr).each(function(i) {
+                    $(sliderArr).each(function (i) {
                         $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
                     });
                 } else {
-                    $(sliderArr).each(function(i) {
+                    $(sliderArr).each(function (i) {
                         $(this).animate({left: (100 * (newId + i)) + "%"}, 1500);
                     });
                 }
@@ -37,9 +37,29 @@ $(document).ready(function () {
         });
 
         $('#left').on('click', function () {
-            alert("нажал");
-        })
-        
+            if (dotId !== 0) {
+                newId = --dotId;
+                $(dotsArr[newId]).addClass("slider__dot--active");
+                $(dotsArr[newId + 1]).removeClass("slider__dot--active");
+
+                $(sliderArr).each(function (i) {
+                    $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                });
+            }
+        });
+
+        $('#right').on('click', function () {
+            if (dotId < (dotsArr.length - 1)) {
+                newId = ++dotId;
+                $(dotsArr[newId]).addClass("slider__dot--active");
+                $(dotsArr[newId - 1]).removeClass("slider__dot--active");
+
+                $(sliderArr).each(function (i) {
+                    $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                });
+            }
+        });
+
     }());
 
     //Аккордеон
