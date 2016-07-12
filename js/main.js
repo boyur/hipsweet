@@ -28,7 +28,7 @@ $(document).ready(function () {
                     });
                 } else {
                     $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (newId + i)) + "%"}, 1500);
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
                     });
                 }
 
@@ -59,6 +59,56 @@ $(document).ready(function () {
                 });
             }
         });
+
+        // JS - Touch
+        var box1 = document.getElementById('slider');
+        var startx = 0
+
+        box1.addEventListener('touchstart', function(e){
+            var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
+            startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser
+            //console.log('Status: touchstart<br> ClientX: ' + startx + 'px');
+            e.preventDefault()
+        }, false);
+
+        // Это отслеживание движения
+        // box1.addEventListener('touchmove', function(e){
+        //     var touchobj = e.changedTouches[0]; // reference first touch point for this event
+        //     var dist = parseInt(touchobj.clientX) - startx;
+        //     console.log('Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px');
+        //     e.preventDefault()
+        // }, false);
+
+        box1.addEventListener('touchend', function(e){
+            var touchobj = e.changedTouches[0]; // reference first touch point for this event
+            //console.log('Status: touchend<br> Resting x coordinate: ' + touchobj.clientX + 'px');
+
+            if(startx < touchobj.clientX) {
+                // jQuery
+                if (dotId !== 0) {
+                    newId = --dotId;
+                    $(dotsArr[newId]).addClass("slider__dot--active");
+                    $(dotsArr[newId + 1]).removeClass("slider__dot--active");
+
+                    $(sliderArr).each(function (i) {
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                    });
+                }
+            } else {
+                // jQuery
+                if (dotId < (dotsArr.length - 1)) {
+                    newId = ++dotId;
+                    $(dotsArr[newId]).addClass("slider__dot--active");
+                    $(dotsArr[newId - 1]).removeClass("slider__dot--active");
+
+                    $(sliderArr).each(function (i) {
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                    });
+                }
+            }
+
+            e.preventDefault()
+        }, false);
 
     }());
 

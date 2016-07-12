@@ -17,5 +17,8 @@
   "dependencies": {
     "jquery": "1.12.3",
     "jquery-mask-plugin": "^1.14.0"
+  },
+  "devDependencies": {
+    "jquery-mobile": "1.4.5"
   }
 }
