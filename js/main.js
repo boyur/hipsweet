@@ -4,37 +4,42 @@ $(document).ready(function () {
     (function () {
 
         var sliderArr = new Array();
+
         $('.bestseller__slider-main').each(function (i) {
             sliderArr.push(this);
+            sliderArr[i].style.left = (100 * i) + "%";
         });
 
-        console.log(sliderArr);
-        var btn = 1;
-        $('.slider__dot').on('click', function (e) {
-            console.log(sliderArr[0]);
-            var activeBtn = e.target.id;
-            var idActiveBtn = +activeBtn.replace(/btn/, "");
-            var slider = "#slider" + idActiveBtn;
-            //var sliderArr = $('#bestsellerSlider').children();
+        var
+            dotsArr = $('.slider__dots > li'),
+            dotId = 0,
+            newId = 0;
 
-            if (btn !== idActiveBtn) {
-                $("#btn" + idActiveBtn).addClass("slider__dot--active");
-                $("#btn" + btn).removeClass("slider__dot--active");
+        dotsArr.on('click', function () {
+            newId = dotsArr.index(this);
 
+            if (dotId !== newId) {
+                $(dotsArr[newId]).addClass("slider__dot--active");
+                $(dotsArr[dotId]).removeClass("slider__dot--active");
 
-
-                if (btn < idActiveBtn) {
-                    sliderArr[btn].animate({left: "-100%"}, 1500);
-                    sliderArr[idActiveBtn].animate({left: "0%"}, 1500);
+                if (dotId < newId) {
+                    $(sliderArr).each(function(i) {
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                    });
                 } else {
-                    sliderArr[btn].animate({left: "100%"}, 1500);
-                    sliderArr[idActiveBtn].animate({left: "0%"}, 1500);
+                    $(sliderArr).each(function(i) {
+                        $(this).animate({left: (100 * (newId + i)) + "%"}, 1500);
+                    });
                 }
 
-                btn = idActiveBtn;
+                dotId = newId;
             }
-
         });
+
+        $('#left').on('click', function () {
+            alert("нажал");
+        })
+        
     }());
 
     //Аккордеон

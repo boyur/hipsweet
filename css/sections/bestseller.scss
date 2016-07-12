@@ -57,10 +57,25 @@
     }
   }
 }
-
-
+//
+//.bestseller__slider-left, .bestseller__slider-right {
+//  position: absolute;
+//  background: rgba(white, 0.5);
+//  width: 100px;
+//  height: 500px;
+//  cursor: pointer;
+//}
+//
+//.bestseller__slider-left {
+//  left: 1px;
+//}
+//
+//.bestseller__slider-right {
+//  right: 100px;
+//}
 
 .bestseller__slider-main {
+  left: 100%;
   position: absolute;
   height: 500px;
   width: 1100px;
