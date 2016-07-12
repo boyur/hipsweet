@@ -956,7 +956,12 @@ ul {
   position: relative;
   min-height: 580px;
   columns: 2;
-  column-gap: 450px; }
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  -ms-grid-column: 2;
+  column-gap: 450px;
+  -webkit-column-gap: 450px;
+  -moz-column-gap: 450px; }
   .team-tabs__content-item.active {
     display: block; }
 
@@ -976,7 +981,8 @@ ul {
 .team__order-man {
   width: 100%;
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  left: 0; }
 
 .team__order-man-img {
   height: 613px;
