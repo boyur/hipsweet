@@ -993,7 +993,7 @@ ul {
 .team__order-man-img {
   height: 613px;
   width: 470px;
-  background: url("../img/team/Roister.png") no-repeat;
+  background: url("../img/team/Roister.png") no-repeat, url("../img/team/quotes.png") 50px 0 no-repeat;
   bottom: 0;
   margin: auto; }
 

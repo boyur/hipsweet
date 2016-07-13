@@ -2,7 +2,6 @@
   background: radial-gradient(circle at 50% 40%, #fafbfc, #cacbcc, #cacbcc 250%)
 }
 
-
 .team__title {
   width: 30%;
   float: left;
@@ -44,7 +43,6 @@
   vertical-align: top;
   width: 31%;
   margin: 1%;
-
 
   .team-tabs__item-main {
     padding: 20px;
@@ -99,7 +97,6 @@
   font-family: "Courier New", serif;
 }
 
-
 .team-tabs__content-item {
   font-size: 14px;
   font-style: italic;
@@ -137,19 +134,17 @@
   margin-bottom: 5px;
 }
 
-
-
-.team__order-man{
+.team__order-man {
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.team__order-man-img{
+.team__order-man-img {
   height: 613px;
   width: 470px;
-  background: url("../img/team/Roister.png") no-repeat;
+  background: url("../img/team/Roister.png")  no-repeat, url("../img/team/quotes.png")  50px 0 no-repeat;
   bottom: 0;
   margin: auto;
 }
@@ -202,10 +197,20 @@
   padding: 69px 50px;
 
   // placeholder
-  ::-webkit-input-placeholder {color: white;}
-  ::-moz-placeholder          {color: white;}/* Firefox 19+ */
-  :-moz-placeholder           {color: white;}/* Firefox 18- */
-  :-ms-input-placeholder      {color: white;}
+  ::-webkit-input-placeholder {
+    color: white;
+  }
+  ::-moz-placeholder {
+    color: white;
+  }
+  /* Firefox 19+ */
+  :-moz-placeholder {
+    color: white;
+  }
+  /* Firefox 18- */
+  :-ms-input-placeholder {
+    color: white;
+  }
 }
 
 .team__form-input {
