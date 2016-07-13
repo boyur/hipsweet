@@ -31,6 +31,7 @@
 .supply__content {
   text-align: center;
   padding-bottom: 38px;
+  margin-top: 55px;
 }
 
 .supply__item {
@@ -38,6 +39,7 @@
   width: 22%;
   margin: 1% 1% 50px;
   text-align: center;
+  vertical-align: top;
 }
 
 .supply__item-title {
@@ -51,4 +53,8 @@
   font-family: Myriad Pro, serif;
   color: #ab594a;
   font-size: 14px;
+}
+
+.supply__img--cake {
+  margin-top: -55px;
 }

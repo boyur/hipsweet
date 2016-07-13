@@ -867,13 +867,15 @@ ul {
 
 .supply__content {
   text-align: center;
-  padding-bottom: 38px; }
+  padding-bottom: 38px;
+  margin-top: 55px; }
 
 .supply__item {
   display: inline-block;
   width: 22%;
   margin: 1% 1% 50px;
-  text-align: center; }
+  text-align: center;
+  vertical-align: top; }
 
 .supply__item-title {
   font-family: ALSMalina, serif;
@@ -885,6 +887,9 @@ ul {
   font-family: Myriad Pro, serif;
   color: #ab594a;
   font-size: 14px; }
+
+.supply__img--cake {
+  margin-top: -55px; }
 
 .team {
   background: radial-gradient(circle at 50% 40%, #fafbfc, #cacbcc, #cacbcc 250%); }
