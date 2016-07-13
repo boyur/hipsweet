@@ -45,6 +45,16 @@ $(document).ready(function () {
                 $(sliderArr).each(function (i) {
                     $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
                 });
+            } else {
+                // к последнему слайду
+                newId = dotsArr.length - 1;
+                dotId = dotsArr.length - 1;
+                $(dotsArr[newId]).addClass("slider__dot--active");
+                $(dotsArr[0]).removeClass("slider__dot--active");
+                ////
+                $(sliderArr).each(function (i) {
+                    $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                });
             }
         });
 
@@ -57,21 +67,31 @@ $(document).ready(function () {
                 $(sliderArr).each(function (i) {
                     $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
                 });
+            } else {
+                // к первому слайду
+                newId = 0;
+                dotId = 0;
+                $(dotsArr[0]).addClass("slider__dot--active");
+                $(dotsArr[dotsArr.length - 1]).removeClass("slider__dot--active");
+                ////
+                $(sliderArr).each(function (i) {
+                    $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                });
             }
         });
 
         // JS - Touch
-        var box1 = document.getElementById('slider');
+        var slide = document.getElementById('slider');
         var startx = 0
 
-        box1.addEventListener('touchstart', function (e) {
+        slide.addEventListener('touchstart', function (e) {
 
             var touchobj = e.changedTouches[0];
             startx = parseInt(touchobj.clientX);
             e.preventDefault()
         }, false);
 
-        box1.addEventListener('touchend', function (e) {
+        slide.addEventListener('touchend', function (e) {
             var touchobj = e.changedTouches[0];
 
 
@@ -85,6 +105,16 @@ $(document).ready(function () {
                     $(sliderArr).each(function (i) {
                         $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
                     });
+                } else {
+                    // к последнему слайду
+                    newId = dotsArr.length - 1;
+                    dotId = dotsArr.length - 1;
+                    $(dotsArr[newId]).addClass("slider__dot--active");
+                    $(dotsArr[0]).removeClass("slider__dot--active");
+                    ////
+                    $(sliderArr).each(function (i) {
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                    });
                 }
             } else {
                 // jQuery
@@ -95,6 +125,16 @@ $(document).ready(function () {
 
                     $(sliderArr).each(function (i) {
                         $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                    });
+                } else {
+                    // к первому слайду
+                    newId = 0;
+                    dotId = 0;
+                    $(dotsArr[0]).addClass("slider__dot--active");
+                    $(dotsArr[dotsArr.length - 1]).removeClass("slider__dot--active");
+                    ////
+                    $(sliderArr).each(function (i) {
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
                     });
                 }
             }
