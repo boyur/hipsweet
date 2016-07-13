@@ -65,13 +65,22 @@ $(document).ready(function () {
         var startx = 0
 
         box1.addEventListener('touchstart', function(e){
+<<<<<<< HEAD
             var touchobj = e.changedTouches[0];
             startx = parseInt(touchobj.clientX);
+=======
+            var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
+            startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser
+>>>>>>> master
             e.preventDefault()
         }, false);
 
         box1.addEventListener('touchend', function(e){
+<<<<<<< HEAD
             var touchobj = e.changedTouches[0];
+=======
+            var touchobj = e.changedTouches[0]; // reference first touch point for this event
+>>>>>>> master
 
             if(startx < touchobj.clientX) {
                 // jQuery
