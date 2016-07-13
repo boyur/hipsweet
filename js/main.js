@@ -67,21 +67,11 @@ $(document).ready(function () {
         box1.addEventListener('touchstart', function(e){
             var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
             startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser
-            //console.log('Status: touchstart<br> ClientX: ' + startx + 'px');
             e.preventDefault()
         }, false);
 
-        // Это отслеживание движения
-        // box1.addEventListener('touchmove', function(e){
-        //     var touchobj = e.changedTouches[0]; // reference first touch point for this event
-        //     var dist = parseInt(touchobj.clientX) - startx;
-        //     console.log('Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px');
-        //     e.preventDefault()
-        // }, false);
-
         box1.addEventListener('touchend', function(e){
             var touchobj = e.changedTouches[0]; // reference first touch point for this event
-            //console.log('Status: touchend<br> Resting x coordinate: ' + touchobj.clientX + 'px');
 
             if(startx < touchobj.clientX) {
                 // jQuery
