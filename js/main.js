@@ -64,25 +64,18 @@ $(document).ready(function () {
         var box1 = document.getElementById('slider');
         var startx = 0
 
-        box1.addEventListener('touchstart', function(e){
-<<<<<<< HEAD
+        box1.addEventListener('touchstart', function (e) {
+
             var touchobj = e.changedTouches[0];
             startx = parseInt(touchobj.clientX);
-=======
-            var touchobj = e.changedTouches[0]; // reference first touch point (ie: first finger)
-            startx = parseInt(touchobj.clientX); // get x position of touch point relative to left edge of browser
->>>>>>> master
             e.preventDefault()
         }, false);
 
-        box1.addEventListener('touchend', function(e){
-<<<<<<< HEAD
+        box1.addEventListener('touchend', function (e) {
             var touchobj = e.changedTouches[0];
-=======
-            var touchobj = e.changedTouches[0]; // reference first touch point for this event
->>>>>>> master
 
-            if(startx < touchobj.clientX) {
+
+            if (startx < touchobj.clientX) {
                 // jQuery
                 if (dotId !== 0) {
                     newId = --dotId;
@@ -180,19 +173,19 @@ $(document).ready(function () {
 });
 
 // Yandex map
-(function() {
+(function () {
     ymaps.ready(init);
     var
         myMap,
         myPlacemark;
 
-    function init(){
+    function init() {
         myMap = new ymaps.Map("map", {
-            center: [44.73498924390664,37.73530074198924],
+            center: [44.73498924390664, 37.73530074198924],
             zoom: 14,
             controls: []
         });
-        myPlacemark = new ymaps.Placemark([44.73498924390664,37.73530074198924], {},{
+        myPlacemark = new ymaps.Placemark([44.73498924390664, 37.73530074198924], {}, {
             iconLayout: 'default#image',
             iconImageHref: 'img/marker.png',
             iconImageSize: [42, 59],
@@ -208,7 +201,8 @@ $(document).ready(function () {
     $('a[href^="#"]').on('click', function () {
         var element = $(this).attr('href');
         $('body').animate({
-            scrollTop: $(element).offset().top}, 1000
+                scrollTop: $(element).offset().top
+            }, 1000
         );
         return false;
     });
