@@ -33,6 +33,10 @@ $(document).ready(function () {
                 }
 
                 dotId = newId;
+            } else {
+
+
+
             }
         });
 
