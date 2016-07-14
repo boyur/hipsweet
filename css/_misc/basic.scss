@@ -20,7 +20,6 @@
 }
 
 .menu__main {
-  font-family: Arial, serif;
   font-size: 16px;
   letter-spacing: 1.6px;
   text-align: justify;
@@ -48,6 +47,8 @@
 .round_btn {
   display: inline-block;
   margin: 0 10px;
+
+
 }
 
 .icons__link {
@@ -83,7 +84,7 @@
   display: inline;
   position: relative;
   color: white;
-  margin-left: 25px;
+  padding: 1%;
 
   &:hover {
     color: #fca211;
@@ -100,12 +101,22 @@
     }
   }
 
+  &:after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 130px;
+    top: 82%;
+    left: 47%;
+    margin-left: -60px;
+    z-index: 2;
+  }
+
 }
 
 .menu__item_link {
   text-decoration: none;
   color: white;
-  padding-bottom: 23px;
 }
 
 .menu__item .menu__item_link:after {
@@ -117,7 +128,7 @@
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin-left: -20px;
+  margin-left: -25px;
   margin-bottom: 3px;
 }
 
@@ -159,6 +170,15 @@
     border-color: transparent transparent rgba(white, 0.9) transparent;
   }
 
+  &:before {
+    content: "";
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 100%;
+  }
+
   &:hover {
     opacity: 1;
     left: 50%;
@@ -174,7 +194,7 @@
 
   &:hover {
     .contacts__dropdown-text {
-      color: #0483d9;
+      color: #303030;
       font-weight: bold;
       padding-right: 0;
     }
@@ -190,8 +210,6 @@
       border-color: transparent transparent transparent #fca211;
     }
   }
-
-
 }
 
 .contacts__dropdown-text {
@@ -199,8 +217,7 @@
   text-decoration: none;
   word-wrap: normal;
   padding-left: 5px;
-  font-family: Arial, serif;
   font-size: 16px;
-  color: #000;
+  color: #575757;
   padding-right: 15px;
 }

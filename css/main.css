@@ -365,6 +365,7 @@ textarea {
   /* 2 */ }
 
 body {
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased; }
@@ -412,7 +413,6 @@ ul {
   height: 66px; }
 
 .menu__main {
-  font-family: Arial, serif;
   font-size: 16px;
   letter-spacing: 1.6px;
   text-align: justify;
@@ -459,7 +459,7 @@ ul {
   display: inline;
   position: relative;
   color: white;
-  margin-left: 25px; }
+  padding: 1%; }
   .menu__item:hover {
     color: #fca211;
     cursor: pointer; }
@@ -468,11 +468,19 @@ ul {
     .menu__item:hover .contacts__dropdown {
       opacity: 1;
       left: 50%; }
+  .menu__item:after {
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 130px;
+    top: 82%;
+    left: 47%;
+    margin-left: -60px;
+    z-index: 2; }
 
 .menu__item_link {
   text-decoration: none;
-  color: white;
-  padding-bottom: 23px; }
+  color: white; }
 
 .menu__item .menu__item_link:after {
   display: inline-block;
@@ -483,7 +491,7 @@ ul {
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin-left: -20px;
+  margin-left: -25px;
   margin-bottom: 3px; }
 
 .menu__item:hover .menu__item_link:after {
@@ -517,6 +525,13 @@ ul {
     border-left-width: 20px;
     border-right-width: 20px;
     border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent; }
+  .contacts__dropdown:before {
+    content: "";
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    width: 100%; }
   .contacts__dropdown:hover {
     opacity: 1;
     left: 50%; }
@@ -528,7 +543,7 @@ ul {
   padding: 10px;
   white-space: nowrap; }
   .contacts__dropdown-item:hover .contacts__dropdown-text {
-    color: #0483d9;
+    color: #303030;
     font-weight: bold;
     padding-right: 0; }
   .contacts__dropdown-item:hover:before {
@@ -546,9 +561,8 @@ ul {
   text-decoration: none;
   word-wrap: normal;
   padding-left: 5px;
-  font-family: Arial, serif;
   font-size: 16px;
-  color: #000;
+  color: #575757;
   padding-right: 15px; }
 
 .bestseller {
@@ -689,7 +703,7 @@ ul {
     position: absolute;
     right: 100%;
     top: 0;
-    width: 55px; }
+    width: 70px; }
   .ingredients__dropdoun-list:after {
     content: "";
     display: block;
