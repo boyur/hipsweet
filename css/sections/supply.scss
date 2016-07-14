@@ -36,10 +36,34 @@
 
 .supply__item {
   display: inline-block;
+  position: relative;
   width: 22%;
   margin: 1% 1% 50px;
   text-align: center;
   vertical-align: top;
+}
+
+.wrapper_item {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.supply__item-pic {
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.supply__item-img {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .supply__item-title {
@@ -56,5 +80,5 @@
 }
 
 .supply__img--cake {
-  margin-top: -55px;
+  margin-top: -30%;
 }
