@@ -1084,6 +1084,21 @@ ul {
 .team__form-check {
   margin-right: 10px; }
 
+input[type="checkbox"] {
+  position: absolute;
+  left: -9999px; }
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px #2b110a;
+  background: white url("../img/team/check.png") 0px -2px no-repeat; }
+
+input[type="checkbox"]:checked + label:before {
+  background-position: 0 -32px; }
+
 .team__form-submit {
   display: inline-block;
   position: absolute;
