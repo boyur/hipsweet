@@ -577,6 +577,7 @@ ul {
   position: relative;
   height: 100%;
   overflow: hidden;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none; }
