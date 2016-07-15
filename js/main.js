@@ -116,50 +116,59 @@ $(document).ready(function () {
         slide.addEventListener('touchend', function (e) {
             var touchobj = e.changedTouches[0];
 
+            var difference = startx - touchobj.clientX;
+            console.log("diff: " + difference);
 
-            if (startx < touchobj.clientX) {
-                // jQuery
-                if (dotId !== 0) {
-                    newId = --dotId;
-                    $(dotsArr[newId]).addClass("slider__dot--active");
-                    $(dotsArr[newId + 1]).removeClass("slider__dot--active");
+            if (difference < 0) {
+                difference = -difference;
+            }
 
-                    $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
-                    });
+            if (startx != touchobj.clientX && difference > 20) {
+                if (startx < touchobj.clientX) {
+                    // jQuery
+                    if (dotId !== 0) {
+                        newId = --dotId;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[newId + 1]).removeClass("slider__dot--active");
+
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        });
+                    } else {
+                        // к последнему слайду
+                        newId = dotsArr.length - 1;
+                        dotId = dotsArr.length - 1;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[0]).removeClass("slider__dot--active");
+                        ////
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                        });
+                    }
                 } else {
-                    // к последнему слайду
-                    newId = dotsArr.length - 1;
-                    dotId = dotsArr.length - 1;
-                    $(dotsArr[newId]).addClass("slider__dot--active");
-                    $(dotsArr[0]).removeClass("slider__dot--active");
-                    ////
-                    $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
-                    });
-                }
-            } else {
-                // jQuery
-                if (dotId < (dotsArr.length - 1)) {
-                    newId = ++dotId;
-                    $(dotsArr[newId]).addClass("slider__dot--active");
-                    $(dotsArr[newId - 1]).removeClass("slider__dot--active");
+                    // jQuery
+                    if (dotId < (dotsArr.length - 1)) {
+                        newId = ++dotId;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[newId - 1]).removeClass("slider__dot--active");
 
-                    $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
-                    });
-                } else {
-                    // к первому слайду
-                    newId = 0;
-                    dotId = 0;
-                    $(dotsArr[0]).addClass("slider__dot--active");
-                    $(dotsArr[dotsArr.length - 1]).removeClass("slider__dot--active");
-                    ////
-                    $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
-                    });
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        });
+                    } else {
+                        // к первому слайду
+                        newId = 0;
+                        dotId = 0;
+                        $(dotsArr[0]).addClass("slider__dot--active");
+                        $(dotsArr[dotsArr.length - 1]).removeClass("slider__dot--active");
+                        ////
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                        });
+                    }
                 }
             }
+
 
             e.preventDefault()
         }, false);
