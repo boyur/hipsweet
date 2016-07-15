@@ -36,14 +36,6 @@ $(document).ready(function () {
             }
         });
 
-        // $("slider")
-        //     .mouseup(function() {
-        //         $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
-        //     })
-        //     .mousedown(function() {
-        //         $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
-        //     });
-
         var jqSider = $("#slider");
         var mouseupX = 0;
 
@@ -56,8 +48,15 @@ $(document).ready(function () {
             var mousedownX = e.clientX;
             console.log(mousedownX);
             console.log("+" + mouseupX);
+            var difference = mousedownX - mouseupX;
+            console.log("diff: " + difference);
 
-            if (mouseupX && mouseupX != mousedownX) {
+            if (difference < 0) {
+                difference = -difference;
+            }
+
+
+            if (mouseupX && mouseupX != mousedownX && difference > 20) {
                 if (mouseupX < mousedownX) {
                     if (dotId !== 0) {
                         newId = --dotId;
@@ -102,13 +101,6 @@ $(document).ready(function () {
             }
 
         });
-
-        // $("#slider").on('mousemove', function (e) {
-        //     var pageCoords = "( " + e.pageX + ", " + e.pageY + " )";
-        //     var clientCoords = "( " + e.clientX + ", " + e.clientY + " )";
-        //     console.log(pageCoords);
-        //     console.log(clientCoords);
-        // });
 
         // JS - Touch
         var slide = document.getElementById('slider');
