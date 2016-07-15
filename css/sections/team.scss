@@ -97,13 +97,16 @@
   font-family: "Courier New", serif;
 }
 
+.team-tabs__content {
+  position: relative;
+}
+
 .team-tabs__content-item {
   font-size: 14px;
   font-style: italic;
   color: #747474;
 
   display: none;
-  position: relative;
   min-height: 580px;
 
   columns: 2;

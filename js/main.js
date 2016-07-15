@@ -16,7 +16,7 @@ $(document).ready(function () {
             dotId = 0, //Позиция точки
             newId = 0; //Новая позиция
 
-        // Обработчик нажатия по крглешку
+        // Обработчик нажатия по круглешку
         dotsArr.on('click', function () {
             newId = dotsArr.index(this); // Записываем порядковый номер круглешка
 
@@ -39,6 +39,9 @@ $(document).ready(function () {
                 dotId = newId; // Задаем точку о умолчанию
             }
         });
+
+
+        // Обработка скрола мышей
 
         var jqSider = $("#slider"); // Забирю слайдер
         var mouseupX = 0;
@@ -221,6 +224,7 @@ $(document).ready(function () {
 
     // tabs
     (function () {
+
         $('.team-tabs__item').on('click', function (e) {
             e.preventDefault();
 
@@ -233,18 +237,19 @@ $(document).ready(function () {
                 reqItem = content.eq(ndx),
                 activeItem = content.filter('.active');
 
+
             item.addClass('active')
                 .siblings()
                 .removeClass('active');
 
-            activeItem.fadeOut(500, function () {
-                reqItem.fadeIn(500, function () {
+            activeItem.stop(true).fadeOut(500, function () {
+                reqItem.stop(true).fadeIn(500, function () {
                     $(this).addClass('active')
                         .siblings()
                         .removeClass('active');
                 });
             });
-        });
+        })
     }());
 
     // Yandex map
@@ -271,4 +276,17 @@ $(document).ready(function () {
         }
     })();
 
+    // scroll
+    (function () {
+        $('a[href^="#"]').on('click', function () {
+            var element = $(this).attr('href');
+            $('body').animate({
+                    scrollTop: $(element).offset().top
+                }, 1000
+            );
+            return false;
+        });
+    })();
+
 });
+

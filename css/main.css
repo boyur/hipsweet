@@ -478,7 +478,7 @@ ul {
     margin-left: -60px;
     z-index: 2; }
 
-.menu__item_link {
+.menu__item_link, .menu__item_one_link {
   text-decoration: none;
   color: white; }
 
@@ -980,12 +980,14 @@ ul {
   font-size: 20px;
   font-family: "Courier New", serif; }
 
+.team-tabs__content {
+  position: relative; }
+
 .team-tabs__content-item {
   font-size: 14px;
   font-style: italic;
   color: #747474;
   display: none;
-  position: relative;
   min-height: 580px;
   columns: 2;
   -webkit-columns: 2;
