@@ -36,6 +36,80 @@ $(document).ready(function () {
             }
         });
 
+        // $("slider")
+        //     .mouseup(function() {
+        //         $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
+        //     })
+        //     .mousedown(function() {
+        //         $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
+        //     });
+
+        var jqSider = $("#slider");
+        var mouseupX = 0;
+
+        jqSider.on('mousedown', function (e) {
+                mouseupX = e.clientX;
+                console.log(mouseupX);
+            });
+
+        jqSider.on('mouseup', function (e) {
+            var mousedownX = e.clientX;
+            console.log(mousedownX);
+            console.log("+" + mouseupX);
+
+            if (mouseupX && mouseupX != mousedownX) {
+                if (mouseupX < mousedownX) {
+                    if (dotId !== 0) {
+                        newId = --dotId;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[newId + 1]).removeClass("slider__dot--active");
+
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        });
+                    } else {
+                        // к последнему слайду
+                        newId = dotsArr.length - 1;
+                        dotId = dotsArr.length - 1;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[0]).removeClass("slider__dot--active");
+                        ////
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                        });
+                    }
+                } else {
+                    if (dotId < (dotsArr.length - 1)) {
+                        newId = ++dotId;
+                        $(dotsArr[newId]).addClass("slider__dot--active");
+                        $(dotsArr[newId - 1]).removeClass("slider__dot--active");
+
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        });
+                    } else {
+                        // к первому слайду
+                        newId = 0;
+                        dotId = 0;
+                        $(dotsArr[0]).addClass("slider__dot--active");
+                        $(dotsArr[dotsArr.length - 1]).removeClass("slider__dot--active");
+                        ////
+                        $(sliderArr).each(function (i) {
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 300);
+                        });
+                    }
+                }
+            }
+
+        });
+
+        // $("#slider").on('mousemove', function (e) {
+        //     var pageCoords = "( " + e.pageX + ", " + e.pageY + " )";
+        //     var clientCoords = "( " + e.clientX + ", " + e.clientY + " )";
+        //     console.log(pageCoords);
+        //     console.log(clientCoords);
+        // });
+
         // JS - Touch
         var slide = document.getElementById('slider');
         var startx = 0;
