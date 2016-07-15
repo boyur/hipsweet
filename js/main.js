@@ -3,25 +3,29 @@ $(document).ready(function () {
     // Слайдер
     (function () {
 
+        // Создаю архив слайдов
         var sliderArr = [];
-
+        // Расставляю слайды
         $('.bestseller__slider-main').each(function (i) {
             sliderArr.push(this);
             sliderArr[i].style.left = (100 * i) + "%";
         });
 
         var
-            dotsArr = $('.slider__dots > li'),
-            dotId = 0,
-            newId = 0;
+            dotsArr = $('.slider__dots > li'), //Собираю массив круглешков
+            dotId = 0, //Позиция точки
+            newId = 0; //Новая позиция
 
+        // Обработчик нажатия по крглешку
         dotsArr.on('click', function () {
-            newId = dotsArr.index(this);
+            newId = dotsArr.index(this); // Записываем порядковый номер круглешка
 
             if (dotId !== newId) {
+                // отменяем активацию первого и вешаем на новый круглешок
                 $(dotsArr[newId]).addClass("slider__dot--active");
                 $(dotsArr[dotId]).removeClass("slider__dot--active");
 
+                // Матаем слайдер
                 if (dotId < newId) {
                     $(sliderArr).each(function (i) {
                         $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
@@ -32,30 +36,32 @@ $(document).ready(function () {
                     });
                 }
 
-                dotId = newId;
+                dotId = newId; // Задаем точку о умолчанию
             }
         });
 
-        var jqSider = $("#slider");
+        var jqSider = $("#slider"); // Забирю слайдер
         var mouseupX = 0;
 
+        // При зажатой кнопки мыши считываю кардинаты по X
         jqSider.on('mousedown', function (e) {
-                mouseupX = e.clientX;
-                console.log(mouseupX);
-            });
+            mouseupX = e.clientX;
+            console.log(mouseupX);
+        });
 
+        // При отпускании кноки мыши
         jqSider.on('mouseup', function (e) {
-            var mousedownX = e.clientX;
+            var mousedownX = e.clientX; // Пишу кардинаты
             console.log(mousedownX);
             console.log("+" + mouseupX);
-            var difference = mousedownX - mouseupX;
+            var difference = mousedownX - mouseupX; // разница между 2умя кардинатами
             console.log("diff: " + difference);
 
-            if (difference < 0) {
+            if (difference < 0) { // Если минус то убирам его
                 difference = -difference;
             }
 
-
+            // начинаем двигать слайдер
             if (mouseupX && mouseupX != mousedownX && difference > 20) {
                 if (mouseupX < mousedownX) {
                     if (dotId !== 0) {
