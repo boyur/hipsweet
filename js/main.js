@@ -189,6 +189,8 @@ $(document).ready(function () {
         var flag = true;
         $('.acco__item').on('click', function (e) {
             e.preventDefault();
+
+
             var
                 $this = $(this),
                 item = $this.closest('.acco__item'),
@@ -208,12 +210,10 @@ $(document).ready(function () {
                         flag = true
                     });
                 } else {
-                    item.removeClass('acco__item--active');
-                    currentContent.slideUp(function () {
-                        flag = true
-                    });
+                    flag = true;
                 }
             }
+
         });
     }());
 
