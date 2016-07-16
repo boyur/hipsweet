@@ -9,9 +9,11 @@
 .footer__logo {
   float: left;
   width: 25%;
+  font-size: 30px;
+
 }
 
-.footer__logo-img {
+.logo__img--footer {
   height: 50px;
 }
 
@@ -41,59 +43,51 @@
 .socials__link {
   background: url("../img/footer-sprite.png") no-repeat;
   display: block;
+  width: 28px;
+  height: 28px;
 }
 
 .socials__item {
   display: inline-block;
-  margin-left: 31px;
+  margin-left: 22px;
 }
 
 .socials__link_fb {
-  width: 11px;
-  height: 22px;
-  background-position: -10px -52px;
+  background-position: -2px -50px;
 
   &:hover {
-    background-position: -10px -10px;
+    background-position: -2px -8px;
   }
 }
 
 .socials__link_inst {
-  width: 22px;
-  height: 22px;
-  background-position: -10px -136px;
+  background-position: -7px -133px;
 
   &:hover {
-    background-position: -10px -94px;
+    background-position: -7px -91px;
   }
 }
 
 .socials__link_ok {
-  width: 13px;
-  height: 22px;
-  background-position: -10px -220px;
+  background-position: -3px -218px;
 
   &:hover {
-    background-position: -10px -178px;
+    background-position: -3px -176px;
   }
 }
 
 .socials__link_tw {
-  width: 22px;
-  height: 17px;
-  background-position: -10px -301px;
+  background-position: -8px -295px;
 
   &:hover {
-    background-position: -10px -262px;
+    background-position: -8px -257px;
   }
 }
 
 .socials__link_vk {
-  width: 22px;
-  height: 16px;
-  background-position: -10px -371px;
+  background-position: -8px -364px;
 
   &:hover {
-    background-position: -10px -338px;
+    background-position: -8px -330px;
   }
 }

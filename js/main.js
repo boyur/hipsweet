@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // Слайдер
+    // Слайдер HandMade )))
     (function () {
 
         // Создаю архив слайдов
@@ -111,7 +111,7 @@ $(document).ready(function () {
 
         });
 
-        // JS - Touch
+        // Обработка Тач-скрина на JS
         var slide = document.getElementById('slider');
         var startx = 0;
 
@@ -237,13 +237,12 @@ $(document).ready(function () {
                 reqItem = content.eq(ndx),
                 activeItem = content.filter('.active');
 
-
             item.addClass('active')
                 .siblings()
                 .removeClass('active');
 
-            activeItem.stop(true).fadeOut(500, function () {
-                reqItem.stop(true).fadeIn(500, function () {
+            activeItem.fadeOut(500, function () {
+                reqItem.fadeIn(500, function () {
                     $(this).addClass('active')
                         .siblings()
                         .removeClass('active');
@@ -278,7 +277,7 @@ $(document).ready(function () {
 
     // scroll
     (function () {
-        $('a[href^="#"]').on('click', function () {
+        $('a[href^="#order"]').on('click', function () {
             var element = $(this).attr('href');
             $('body').animate({
                     scrollTop: $(element).offset().top

@@ -405,7 +405,22 @@ ul {
   float: left;
   width: 25%;
   padding-right: 8%;
-  margin-left: 20px; }
+  margin-left: 20px;
+  font-size: 36px; }
+
+.logo__link {
+  display: block;
+  text-decoration: none; }
+
+.logo__img {
+  display: inline-block;
+  vertical-align: middle; }
+
+.logo__text {
+  font-family: ALSMalina, serif;
+  display: inline-block;
+  color: #fca211;
+  vertical-align: middle; }
 
 .menu {
   float: left;
@@ -477,6 +492,10 @@ ul {
     left: 47%;
     margin-left: -60px;
     z-index: 2; }
+
+.menu__item_one_link:hover {
+  color: #fca211;
+  cursor: pointer; }
 
 .menu__item_link, .menu__item_one_link {
   text-decoration: none;
@@ -633,8 +652,8 @@ ul {
   color: rgba(255, 255, 255, 0.1);
   font-size: 150px;
   z-index: 1;
-  margin-top: 150px;
-  margin-left: 20px; }
+  bottom: 140px;
+  left: 20px; }
 
 .bestseller__info {
   float: right;
@@ -661,10 +680,10 @@ ul {
   background: rgba(255, 255, 255, 0.1) url("../img/slider/ingredients-sprite.png") -1px -159px; }
   .ingredients__icon:hover {
     background: #ffaf28 url("../img/slider/ingredients-sprite.png") -1px -159px; }
-    .ingredients__icon:hover .ingredients__dropdoun-list {
-      display: block; }
+    .ingredients__icon:hover .ingredients__dropdown-list {
+      display: table; }
 
-.ingredients__dropdoun-list {
+.ingredients__dropdown-list {
   display: none;
   width: 380px;
   background-color: rgba(255, 255, 255, 0.92);
@@ -677,14 +696,14 @@ ul {
   color: #575757;
   border-radius: 20px;
   z-index: 2; }
-  .ingredients__dropdoun-list:before {
+  .ingredients__dropdown-list:before {
     content: "";
     height: 100%;
     position: absolute;
     right: 100%;
     top: 0;
     width: 70px; }
-  .ingredients__dropdoun-list:after {
+  .ingredients__dropdown-list:after {
     content: "";
     display: block;
     position: absolute;
@@ -695,28 +714,26 @@ ul {
     right: 100%;
     top: 31%; }
 
-.ingredients__dropdoun-item {
+.ingredients__dropdown-item {
   padding: 5px 0; }
-  .ingredients__dropdoun-item .ingredient__icon {
+  .ingredients__dropdown-item .ingredient__icon {
     background-image: url("../img/slider/ingredients-sprite.png");
-    display: inline-block;
     vertical-align: middle;
     width: 35px;
     height: 28px;
     color: #393939; }
-  .ingredients__dropdoun-item .ingredient__icon_flour {
+  .ingredients__dropdown-item .ingredient__icon_flour {
     background-position: -7px -80px; }
-  .ingredients__dropdoun-item .ingredient__icon_eggs {
+  .ingredients__dropdown-item .ingredient__icon_eggs {
     background-position: -8px -40px; }
-  .ingredients__dropdoun-item .ingredient__icon_sugar {
+  .ingredients__dropdown-item .ingredient__icon_sugar {
     background-position: -8px -241px; }
-  .ingredients__dropdoun-item .ingredient__icon_butter {
+  .ingredients__dropdown-item .ingredient__icon_butter {
     background-position: -9px -2px; }
-  .ingredients__dropdoun-item .ingredient__icon_susu {
+  .ingredients__dropdown-item .ingredient__icon_susu {
     background-position: -9px -121px; }
 
 .ingredient {
-  display: inline-block;
   width: 63%; }
 
 .bestseller__ingredients_text {
@@ -780,6 +797,9 @@ ul {
     cursor: pointer; }
   .bestseller__order:active {
     margin-top: 13px; }
+
+.bestseller__order-link {
+  text-decoration: none; }
 
 .delicious {
   background: radial-gradient(circle at 70% 75%, #fffffe, #c8c7c8, #c8c7c8 200%); }
@@ -873,7 +893,7 @@ ul {
   vertical-align: top; }
 
 .wrapper_item {
-  width: 80%;
+  width: 75%;
   margin: 10px auto; }
 
 .supply__item-pic {
@@ -1182,9 +1202,10 @@ input[type="checkbox"]:checked + label:before {
 
 .footer__logo {
   float: left;
-  width: 25%; }
+  width: 25%;
+  font-size: 30px; }
 
-.footer__logo-img {
+.logo__img--footer {
   height: 50px; }
 
 .footer__copyright {
@@ -1208,46 +1229,38 @@ input[type="checkbox"]:checked + label:before {
 
 .socials__link {
   background: url("../img/footer-sprite.png") no-repeat;
-  display: block; }
+  display: block;
+  width: 28px;
+  height: 28px; }
 
 .socials__item {
   display: inline-block;
-  margin-left: 31px; }
+  margin-left: 22px; }
 
 .socials__link_fb {
-  width: 11px;
-  height: 22px;
-  background-position: -10px -52px; }
+  background-position: -2px -50px; }
   .socials__link_fb:hover {
-    background-position: -10px -10px; }
+    background-position: -2px -8px; }
 
 .socials__link_inst {
-  width: 22px;
-  height: 22px;
-  background-position: -10px -136px; }
+  background-position: -7px -133px; }
   .socials__link_inst:hover {
-    background-position: -10px -94px; }
+    background-position: -7px -91px; }
 
 .socials__link_ok {
-  width: 13px;
-  height: 22px;
-  background-position: -10px -220px; }
+  background-position: -3px -218px; }
   .socials__link_ok:hover {
-    background-position: -10px -178px; }
+    background-position: -3px -176px; }
 
 .socials__link_tw {
-  width: 22px;
-  height: 17px;
-  background-position: -10px -301px; }
+  background-position: -8px -295px; }
   .socials__link_tw:hover {
-    background-position: -10px -262px; }
+    background-position: -8px -257px; }
 
 .socials__link_vk {
-  width: 22px;
-  height: 16px;
-  background-position: -10px -371px; }
+  background-position: -8px -364px; }
   .socials__link_vk:hover {
-    background-position: -10px -338px; }
+    background-position: -8px -330px; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome

@@ -10,6 +10,25 @@
   width: 25%;
   padding-right: 8%;
   margin-left: 20px;
+
+  font-size: 36px;
+}
+
+.logo__link {
+  display: block;
+  text-decoration: none;
+}
+
+.logo__img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo__text {
+  font-family: ALSMalina, serif;
+  display: inline-block;
+  color: #fca211;
+  vertical-align: middle;
 }
 
 .menu {
@@ -112,6 +131,11 @@
     z-index: 2;
   }
 
+}
+
+.menu__item_one_link:hover {
+  color: #fca211;
+  cursor: pointer;
 }
 
 
