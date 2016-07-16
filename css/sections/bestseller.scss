@@ -8,7 +8,7 @@
   padding-bottom: 100px;
 }
 
-.bestseller__slider-body {
+.slider {
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -19,62 +19,14 @@
   -ms-user-select: none;
 }
 
-.slider__dots {
-  position: absolute;
-  width: 1100px;
-  margin: auto;
-  text-align: center;
-  bottom: 50px;
-}
-
-.slider__dot {
-  display: inline-block;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  margin: 5px;
-
-  &:before {
-    top: 0;
-    left: 0;
-    content: '\2022';
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    color: #fff;
-    opacity: 1;
-    line-height: 14px;
-    font-size: 32px;
-  }
-
-  &:hover {
-    &:before {
-      color: rgba(252, 162, 17, 0.6);
-    }
-  }
-}
-
-.slider__dot--active {
-
-  &:before {
-    color: #fca211;
-  }
-
-  &:hover {
-    &:before {
-      color: #fca211;
-    }
-  }
-}
-
-.bestseller__slider-main {
+.slider__main {
   left: 100%;
   position: absolute;
   height: 500px;
   width: 1100px;
 }
 
-.bestseller__slider_img {
+.slider__img {
   pointer-events: none;
   position: absolute;
   left: 17%;
@@ -82,7 +34,7 @@
   height: 475px;
 }
 
-.bestseller__big_text {
+.slider__big-text {
   position: absolute;
   font-family: ALSMalina, serif;
   color: rgba(#fff, .1);
@@ -93,19 +45,12 @@
   left: 20px;
 }
 
-.bestseller__info {
-  float: right;
-  width: 410px;
-  color: #fff;
-  margin-top: 35px;
-}
-
 // LEFT
-.bestseller__left_items {
+.slider__left {
   display: inline-block;
 }
 
-.bestseller__ingredients {
+.slider__ingredients {
   display: inline-block;
   margin-top: 85px;
   margin-left: 20px;
@@ -178,51 +123,51 @@
     color: #393939;
   }
 
-  .ingredient__icon_flour {
+  .ingredient__icon--flour {
     background-position: -7px -80px;
   }
 
-  .ingredient__icon_eggs {
+  .ingredient__icon--eggs {
     background-position: -8px -40px;
   }
 
-  .ingredient__icon_sugar {
+  .ingredient__icon--sugar {
     background-position: -8px -241px;
   }
 
-  .ingredient__icon_butter {
+  .ingredient__icon--butter {
     background-position: -9px -2px;
   }
 
-  .ingredient__icon_susu {
+  .ingredient__icon--susu {
     background-position: -9px -121px;
   }
 }
 
-.ingredient {
+.ingredient__name {
   width: 63%;
 }
 
-.bestseller__ingredients_text {
+.slider__ingredients-text {
   color: white;
   font-size: 15px;
   margin-top: -5px;
 }
 
-.bestseller__time {
+.slider__time {
   margin-top: 200px;
   margin-left: 5px;
   color: white;
 }
 
-.bestseller__time_title {
+.slider__time-title {
   color: rgba(#fff, 0.28);
   font-size: 13px;
   letter-spacing: 1.3px;
   text-align: center;
 }
 
-.bestseller__time_clock {
+.slider__time-clock {
   font-family: ALSMalina, serif;
   color: #fff;
   font-size: 24px;
@@ -232,27 +177,34 @@
 }
 
 // RIGHT
-.bestseller__title {
+.slider__info {
+  float: right;
+  width: 410px;
+  color: #fff;
+  margin-top: 35px;
+}
+
+.slider__title {
   font-family: ALSMalina, serif;
   font-size: 62px;
   line-height: 75px;
   margin-bottom: 25px;
 }
 
-.bestseller__text {
+.slider__text {
   font-family: Arial, serif;
   font-size: 15px;
   margin-bottom: 30px;
 }
 
-.bestseller__price {
+.slider__price {
   display: inline-block;
   font-family: ALSMalina, serif;
   font-size: 62px;
   line-height: 52px;
 }
 
-.bestseller__order {
+.slider__order-btn {
   display: inline-block;
   float: right;
   background: #fca211;
@@ -274,6 +226,55 @@
   }
 }
 
-.bestseller__order-link {
+.slider__order-link {
   text-decoration: none;
 }
+
+.slider__dots {
+  position: absolute;
+  width: 1100px;
+  margin: auto;
+  text-align: center;
+  bottom: 50px;
+}
+
+.slider__dot {
+  display: inline-block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+
+  &:before {
+    top: 0;
+    left: 0;
+    content: '\2022';
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    opacity: 1;
+    line-height: 14px;
+    font-size: 32px;
+  }
+
+  &:hover {
+    &:before {
+      color: rgba(252, 162, 17, 0.6);
+    }
+  }
+}
+
+.slider__dot--active {
+
+  &:before {
+    color: #fca211;
+  }
+
+  &:hover {
+    &:before {
+      color: #fca211;
+    }
+  }
+}
+

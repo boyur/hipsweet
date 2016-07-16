@@ -54,51 +54,6 @@
   }
 }
 
-.header__buttons {
-  display: inline;
-  float: right;
-  text-align: center;
-  color: white;
-  width: 13%;
-  padding-top: 15px;
-}
-
-.round_btn {
-  display: inline-block;
-  margin: 0 10px;
-
-
-}
-
-.icons__link {
-  display: block;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  background: rgba(173, 46, 51, 1) url("../img/header/header-sprite.png") no-repeat;
-
-  &:hover {
-    background: rgb(255, 175, 40) url("../img/header/header-sprite.png") no-repeat;
-  }
-}
-
-.icons__link_person {
-  background-position: 0 0;
-
-  &:hover {
-    background-position: 0 0;
-  }
-}
-
-.icons__link_search {
-  background-position: 0 -40px;
-
-  &:hover {
-    background-position: 0 -40px;
-  }
-}
-
-
 .menu__item {
   display: inline;
   position: relative;
@@ -109,7 +64,7 @@
     color: #fca211;
     cursor: pointer;
 
-    .menu__item_link {
+    .menu__link {
       color: #fca211;
     }
 
@@ -133,18 +88,18 @@
 
 }
 
-.menu__item_one_link:hover {
+.menu__link--single:hover {
   color: #fca211;
   cursor: pointer;
 }
 
 
-.menu__item_link, .menu__item_one_link {
+.menu__link, .menu__link--single {
   text-decoration: none;
   color: white;
 }
 
-.menu__item .menu__item_link:after {
+.menu__item .menu__link:after {
   display: inline-block;
   content: "";
   height: 4px;
@@ -157,7 +112,7 @@
   margin-bottom: 3px;
 }
 
-.menu__item:hover .menu__item_link:after {
+.menu__item:hover .menu__link:after {
   content: "";
   border-left: 1px solid #ffaf28;
   border-top: 1px solid #ffaf28;
@@ -165,10 +120,9 @@
   border-bottom: none;
   margin-bottom: 0;
 }
-
 //Всплывашка
 
-.contacts__dropdown {
+.menu__dropdown {
   position: absolute;
   background: rgba(white, 0.9);
   border-radius: 10px;
@@ -210,7 +164,7 @@
   }
 }
 
-.contacts__dropdown-item {
+.menu__dropdown-item {
   display: block;
   position: relative;
   text-align: left;
@@ -218,7 +172,7 @@
   white-space: nowrap;
 
   &:hover {
-    .contacts__dropdown-text {
+    .menu__dropdown-text {
       color: #303030;
       font-weight: bold;
       padding-right: 0;
@@ -237,7 +191,7 @@
   }
 }
 
-.contacts__dropdown-text {
+.menu__dropdown-link {
   display: inline-block;
   text-decoration: none;
   word-wrap: normal;
@@ -245,4 +199,48 @@
   font-size: 16px;
   color: #575757;
   padding-right: 15px;
+}
+
+.header__buttons {
+  display: inline;
+  float: right;
+  text-align: center;
+  color: white;
+  width: 13%;
+  padding-top: 15px;
+}
+
+.round-btn {
+  display: inline-block;
+  margin: 0 10px;
+
+
+}
+
+.icons__link {
+  display: block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: rgba(173, 46, 51, 1) url("../img/header/header-sprite.png") no-repeat;
+
+  &:hover {
+    background: rgb(255, 175, 40) url("../img/header/header-sprite.png") no-repeat;
+  }
+}
+
+.icons__link--person {
+  background-position: 0 0;
+
+  &:hover {
+    background-position: 0 0;
+  }
+}
+
+.icons__link--search {
+  background-position: 0 -40px;
+
+  &:hover {
+    background-position: 0 -40px;
+  }
 }

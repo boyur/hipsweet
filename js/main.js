@@ -6,7 +6,7 @@ $(document).ready(function () {
         // Создаю архив слайдов
         var sliderArr = [];
         // Расставляю слайды
-        $('.bestseller__slider-main').each(function (i) {
+        $('.slider__main').each(function (i) {
             sliderArr.push(this);
             sliderArr[i].style.left = (100 * i) + "%";
         });
