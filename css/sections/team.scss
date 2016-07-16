@@ -15,6 +15,7 @@
 // tabs
 
 .team-tabs {
+  position: relative;
   width: 100%;
   min-height: 300px;
 }
@@ -95,10 +96,6 @@
   text-decoration: none;
   font-size: 20px;
   font-family: "Courier New", serif;
-}
-
-.team-tabs__content {
-  position: relative;
 }
 
 .team-tabs__content-item {
@@ -244,6 +241,7 @@ input[type="checkbox"] + label:before {
   border: 1px #2b110a;
   background: white url("../img/team/check.png") 0px -2px no-repeat;
 }
+
 input[type="checkbox"]:checked + label:before {
   background-position: 0 -32px;
 }

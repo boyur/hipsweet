@@ -384,6 +384,9 @@ ul {
   padding: 0;
   margin: 0; }
 
+h2 {
+  margin: 0; }
+
 @font-face {
   font-family: 'ALSMalina';
   src: url("../fonts/malina-webfont.eot");
@@ -941,6 +944,7 @@ ul {
   line-height: 76px; }
 
 .team-tabs {
+  position: relative;
   width: 100%;
   min-height: 300px; }
 
@@ -999,9 +1003,6 @@ ul {
   text-decoration: none;
   font-size: 20px;
   font-family: "Courier New", serif; }
-
-.team-tabs__content {
-  position: relative; }
 
 .team-tabs__content-item {
   font-size: 14px;
@@ -1142,21 +1143,21 @@ input[type="checkbox"]:checked + label:before {
 
 .questions {
   background: url("../img/questions/back_questions.jpg") no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 100px; }
 
 .questions__title {
   font-family: ALSMalina, serif;
   text-align: center;
   font-size: 40px;
   color: white;
-  padding-top: 80px;
   padding-bottom: 65px; }
 
 .acco {
   width: 960px;
   min-height: 470px;
-  margin: auto;
-  padding-bottom: 100px; }
+  margin: auto; }
 
 .acco__item {
   font-size: 22px;
