@@ -452,7 +452,7 @@ h2 {
     cursor: pointer; }
     .menu__item:hover .menu__link {
       color: #fca211; }
-    .menu__item:hover .contacts__dropdown {
+    .menu__item:hover .menu__dropdown {
       opacity: 1;
       left: 50%; }
   .menu__item:after {
@@ -533,7 +533,7 @@ h2 {
   text-align: left;
   padding: 10px;
   white-space: nowrap; }
-  .menu__dropdown-item:hover .menu__dropdown-text {
+  .menu__dropdown-item:hover .menu__dropdown-link {
     color: #303030;
     font-weight: bold;
     padding-right: 0; }

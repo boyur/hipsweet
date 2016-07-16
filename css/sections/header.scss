@@ -68,7 +68,7 @@
       color: #fca211;
     }
 
-    .contacts__dropdown {
+    .menu__dropdown {
       //display: inline-block;
       opacity: 1;
       left: 50%;
@@ -172,7 +172,7 @@
   white-space: nowrap;
 
   &:hover {
-    .menu__dropdown-text {
+    .menu__dropdown-link {
       color: #303030;
       font-weight: bold;
       padding-right: 0;

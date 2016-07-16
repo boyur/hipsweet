@@ -28,11 +28,11 @@ $(document).ready(function () {
                 // Матаем слайдер
                 if (dotId < newId) {
                     $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1000);
                     });
                 } else {
                     $(sliderArr).each(function (i) {
-                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                        $(this).animate({left: (100 * (-newId + i)) + "%"}, 1000);
                     });
                 }
 
@@ -73,7 +73,7 @@ $(document).ready(function () {
                         $(dotsArr[newId + 1]).removeClass("slider__dot--active");
 
                         $(sliderArr).each(function (i) {
-                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1000);
                         });
                     } else {
                         // к последнему слайду
@@ -93,7 +93,7 @@ $(document).ready(function () {
                         $(dotsArr[newId - 1]).removeClass("slider__dot--active");
 
                         $(sliderArr).each(function (i) {
-                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1500);
+                            $(this).animate({left: (100 * (-newId + i)) + "%"}, 1000);
                         });
                     } else {
                         // к первому слайду
